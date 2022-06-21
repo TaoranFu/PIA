@@ -18,7 +18,7 @@ Real output folder: 'Output'
 - (edit cropnthr_old.m # edit cropnthr_old.m and cropnthr.m and change values if images in ./Cropped are too dark)
 - deleteline # erase the bright light noise at the top and bottom of the images, then check the saved images in ./Deleteline
 - (edit deleteline.m # edit deleteline.m, change values of radius/h,  if images in ./Deleteline remains light lines)
-- # type and run deletepoint but this script need the matlab desktop, alternatively, run (quit; cp -R Deleteline/ Input) to copy images to /Input folder
+- \# type and run deletepoint but this script need the matlab desktop, alternatively, run (quit; cp -R Deleteline/ Input) to copy images to /Input folder
 - /Applications/MATLAB_R2022a.app/bin/matlab -nodisplay
 - Main_function # run the main function on extracting the size of the colony area
 - quit # quit Matlab
@@ -27,7 +27,7 @@ Real output folder: 'Output'
 - open Output/Visualization.pdf # then check the pdf in the ./Output folder for final check, see if abnormal in extremely high MIC strains
 - cd .. # return back to the MICs directory
 - open mic_add.r # open R script
-- # in row #14 change the sample name to the current runned one and press ctrl+s to save it
+- \# in row #14 change the sample name to the current runned one and press ctrl+s to save it
 - quit # type in r to quit r
 - rscript mic_add.r # run the mic process note
 - open mic_checklist.csv # check if the current sample name is at the bottom
