@@ -5,11 +5,23 @@ Real output folder: 'Output'
 - Result.txt for all the data
 - Visualization.pdf for a rough visualisation of data
 
-  - Step Function Action&explanation Input&Output folder
-  - Step 0.0 'Improvement.m' for creating gray images adjusted with biased light. 'Raw0/'-->'Raw/'
-  - Step 0.1 Pick the focus area. Run 'pickpoint.m' to select the colony centers at 4 corners. Images of plate 1, 2 and 3-->'multicentes0.txt','p_x0.txt','p_y0.txt'
-  - Step 1 Crop and do threshold. Run 'cropnthr_old.m',then'cropnthr.m',use template 'for batch' OR 'for selecting A1'. 'Raw/'-->'Cropped/'
-  - Step 2 Pre-processing images. Run 'deleteline.m' to delete the strong light noise at the top and bottom part on the images; and run 'deletepoint.m' to do the segmentation by adding black lines to avoid growth toward overlapping colonies. 'Cropped/'-->'Input/'
-  - Step 3 Sum the colonies size. Run 'Main_function.m' to read circle areas and do seeded region growth. 'Input/'-->'Output/'
-  - Step 4 Check output files in 'Output/'
-  - Step 5 Run Scr.R in Visualization.Rproj
+%% workflow using macOS terminal with matlab R2022a and R
+- cd ~/Dropbox\ \(The\ University\ of\ Manchester\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ % go to MIC home directory
+- mkdir XXXX/Raw0 % replace XXXX with the sample name
+- mv XXXX/*.png XXXX/Raw0 % replace XXXX with the sample name, -R for copying all the content in the folder
+- cp -R QC/Template/ XXXX  % copy all files and folders in Template to the sample folder
+- cd XXXX % go to sample folder to run Matlab scripts
+- /Applications/MATLAB_R2022a.app/bin/matlab -nodesktop %start Matlab within Terminal but open matlab editor
+- Improvement % run improvement to overlap blank plate image with sample images
+- cropnthr_old % run old crop with one value as threshold
+- cropnthr % run2 other methods of threshold and crop the image, return images are saved in ./Cropped
+- (edit cropnthr_old.m % edit cropnthr_old.m and cropnthr.m and change values if images in ./Cropped are too dark)
+- deleteline % erase the bright light noise at the top and bottom of the images, then check the saved images in ./Deleteline
+- (edit deleteline.m % edit deleteline.m, change values of radius/h,  if images in ./Deleteline remains light lines)
+- % type and run deletepoint but this script need the matlab desktop, alternatively, run (quit; cp -R Deleteline/ Input) to copy images to /Input folder
+- /Applications/MATLAB_R2022a.app/bin/matlab -nodisplay
+- Main_function % run the main function on extracting the size of the colony area
+- quit % quit Matlab
+- Rscript Scr.R % run r script to visualize the MIC data
+- open Output/result_*.png % check input and output images if colony are well detected by matlab
+- open Output/Visualization.pdf % then check the pdf in the ./Output folder for final check, see if abnormal in extremely high MIC strains
