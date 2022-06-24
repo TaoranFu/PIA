@@ -5,8 +5,8 @@ Real output folder: 'Output'
 - Result.txt for all the data
 - Visualization.pdf for a rough visualisation of data
 
-## workflow using macOS terminal with matlab R2022a and R
-- cd ~/Dropbox\ \(The\ University\ of\ Manchester\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ # go to MIC home directory
+## Workflow (using macOS terminal with matlab R2022a and R)
+- cd ~/Dropbox\ \\(The\ University\ of\ Manchester\\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ # go to MIC home directory
 - mkdir XXXX/Raw0 # replace XXXX with the sample name
 - mv XXXX/*.png XXXX/Raw0 # replace XXXX with the sample name, -R for copying all the content in the folder
 - cp -R QC/Template/ XXXX  # copy all files and folders in Template to the sample folder
