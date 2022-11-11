@@ -16,7 +16,7 @@ Real output folder: 'Output'
 ### image names have to be the default output format from phenobooth
 ### () is to define options, make sure copy/paste only the content within
 ### if your are working based on a cloud storage (e.g. Dropbox), make sure you have all resources working offline otherwise might cause empty scripts running
-- cd ~/Dropbox\ \\(The\ University\ of\ Manchester\\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ # go to MIC home directory
+- cd ~/Dropbox\ \(The\ University\ of\ Manchester\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ # go to MIC home directory
 - mkdir XXXX/Raw0 # replace XXXX with the sample name, while space has to be '\ ', same to the following rows
 - mv XXXX/*.png XXXX/Raw0 # replace XXXX with the sample name, -R for copying all the content in the folder
 - cp -R QC/Template/ XXXX  # copy all files and folders in Template to the sample folder
