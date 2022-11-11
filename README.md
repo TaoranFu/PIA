@@ -11,11 +11,11 @@ Real output folder: 'Output'
 - Active Figure Zoom for Selection Points # to zoom and pick points in deletepoint.m
 
 ## Workflow (using macOS terminal with matlab R2022a and R)
-# all '-' are for seperating steps, do not copy/paste onto terminal
-# replace XXXX with your sample folder name
-# image names have to be the default output format from phenobooth
-# () is to define options, make sure copy/paste only the content within
-# if your are working based on a cloud storage (e.g. Dropbox), make sure you have all resources working offline otherwise might cause empty scripts running
+### all '-' are for seperating steps, do not copy/paste onto terminal
+### replace XXXX with your sample folder name
+### image names have to be the default output format from phenobooth
+### () is to define options, make sure copy/paste only the content within
+### if your are working based on a cloud storage (e.g. Dropbox), make sure you have all resources working offline otherwise might cause empty scripts running
 - cd ~/Dropbox\ \\(The\ University\ of\ Manchester\\)/WT-Evolution\ of\ antibiotic\ resistance/results/phenotypic\ assays/Data/MICs/ # go to MIC home directory
 - mkdir XXXX/Raw0 # replace XXXX with the sample name, while space has to be '\ ', same to the following rows
 - mv XXXX/*.png XXXX/Raw0 # replace XXXX with the sample name, -R for copying all the content in the folder
