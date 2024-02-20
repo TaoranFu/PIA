@@ -6,8 +6,8 @@ function piafilter(varargin)
 % Syntax:
 %     piafilter("Mode","pick","FocusDir","../example/02_crop and filter/",
 %             "InDir","../example/01_background correction","OutDir","../example/02_crop and filter",
-%             "Rescue", "no","RescueValue", "0.75",
-%             "FilterValue","104")
+%             "Rescue", "no","RescueValue", 0.75,
+%             "FilterValue",104)
 % 
 % "Mode":
 %     "pick"        pick 8 reference points-6 background points and 2 colony
