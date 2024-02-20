@@ -4,8 +4,8 @@ function edgelight(varargin)
 % Phenobooth Image Analysis Tool @version 2.0
 % 
 % Syntax:
-%     filter("InDir","", "OutDir","",
-%     "Thichness", 17, "Radius", 10, "Ellipticity", 1.1, "Height", 50)
+%     edgelight("InDir",""../example/02_crop and filter", "OutDir",""../example/03_edge light correction",
+%               "Thichness", 17, "Radius", 10, "Ellipticity", 1.1, "Height", 50)
 % 
 % "Thichness"       Light thickness to correct
 % "Height"            The maximum distance from the upper and lower edges of a bright light
