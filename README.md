@@ -3,8 +3,8 @@
 This is a pipeline based on Matlab to analyze and extract the colony data from Phenobooth+ images.
 
 ## Matlab add-ons to set up in advance
-- Image Processing Toolbox # image processing package
-- Active Figure Zoom for Selection Points # to zoom and pick points for `segment`
+- Image Processing Toolbox: image processing package
+- Active Figure Zoom for Selection Points: to zoom and pick points for `segment`
 
 ## Documentation
 
