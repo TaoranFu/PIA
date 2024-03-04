@@ -117,6 +117,10 @@ for c = 1:96 % process per well
         for a1 = round((i-35:1:i+35)) % process resolution = 35?
             for b1 = round((j-35:1:j+35))
                 if ((a1-i)^2+(b1-j)^2/(e)^2) < (radius^2)
+                    a1 = max(1,a1);
+                    b1 = max(1,b1);
+                    a1 = min(a1,size(well_read,1));
+                    b1 = min(b1,size(well_read,2));
                     well_read(a1,b1,1) = x(a1,b1,1);
                     well_read(a1,b1,2) = x(a1,b1,2);
                     well_read(a1,b1,3) = x(a1,b1,3);
@@ -148,7 +152,8 @@ for c = 1:96 % process per well
                 if mod(yr,2)==1
                     continue
                 end
-                if well_growth_new(round(i+xr),round(j+yr)) == 0 && x(round(i+xr),round(j+yr)) >100
+                if well_growth_new(min(max(round(i+xr),1),size(well_growth_new,1)),min(max(round(j+yr),1),size(well_growth_new,2))) == 0 &&...
+                        x(min(max(round(i+xr),1),size(x,1)),min(max(round(j+yr),1),size(x,1))) >100
                     well_growth_new = max(well_growth_new,regiongrowing(im2double(x),round(i+xr),round(j+yr)));
                 end
                 well_growth = max(well_growth,well_growth_new);
