@@ -25,10 +25,12 @@ well=x; % To show the circle area
             xr=round(r*cos(aplha));
             yr=round(e*r*sin(aplha));
             if ii+xr<=0
-                ii+xr=1;
+                ii=0;
+                xr=1;
             end
             if jj+yr<=0
-                jj+yr=1;
+                jj=0;
+                yr=1;
             end
             well(ii+xr,jj+yr,1)=255;
             well(ii+xr,jj+yr,2)=0;
