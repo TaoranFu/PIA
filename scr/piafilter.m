@@ -173,8 +173,9 @@ for i = 1:length(filelist)
         BWdfill = imfill(BWsdil,'holes');
         imshow(BWdfill)
 
-        % clean the border
-        BWnobord = imclearborder(BWdfill,1);
+        % clean the border - ignore - this doesn't work properly
+        % BWnobord = imclearborder(BWdfill,1); 
+        BWnobord = BWdfill;
 
         % smooth the object
         seD = strel('diamond',1);
