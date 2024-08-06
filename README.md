@@ -1,6 +1,6 @@
 
 ## Phenobooth Image Analysis PIA 2.0
-This is a pipeline based on Matlab to analyze and extract the colony data from Phenobooth+ images.
+These are scripts based on Matlab to analyze and extract the colony data from Phenobooth+ images. Many welcome to report issues/discussions since not all of the functions are tested
 
 ## Matlab add-ons to set up in advance
 - Image Processing Toolbox: image processing package
@@ -43,7 +43,7 @@ edgelight("InDir","../example/02_crop and filter", "OutDir","../example/03_edge 
 ```
 
 ### Segmentation
-To manually draw lines between colonies to separate overlapping colonies. Press 'esc' to skip the shown image, and press any other key on the keyboard, e.g. 'a', to enter the selection mode for this image. In the selection mode, drag and hold to select an area to zoom in, then left-click and a black line will be drawn between the clicks to separate as desired. 
+To manually draw lines between colonies to separate overlapping colonies. Press 'esc' to skip the shown image, and press any other key on the keyboard, e.g. 'a', to enter the selection mode for this image. In the selection mode, drag and hold to select an area to zoom in, then left-click and a black line will be drawn between the clicks to separate as desired. Shift+left-click on the last point to finish the drawing.  
 ```matlab
 segment("Mode","manual",
         "InDir", "../example/03_edge light correction",...
