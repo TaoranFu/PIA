@@ -1,6 +1,6 @@
 
 ## Phenobooth Image Analysis PIA 2.0
-These are scripts based on Matlab to analyze and extract the colony data from Phenobooth+ images. Many welcome to report issues/discussions since not all of the functions are tested
+These are scripts based on Matlab to analyze and extract the colony data from Phenobooth+ images. Welcome to report issues/discussions since not all of the functions are tested
 
 ## Matlab add-ons to set up in advance
 - Image Processing Toolbox: image processing package
